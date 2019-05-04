@@ -32,7 +32,7 @@ const AuthStackNavigator = createStackNavigator(
         },
     },
     {
-        headerLayoutPreset: 'center'
+        headerLayoutPreset: 'center',
     }
 
 );

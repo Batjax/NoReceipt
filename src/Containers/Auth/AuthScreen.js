@@ -7,8 +7,7 @@ import AuthForm from '../../Components/AuthForm';
 class AuthScreen extends Component {
 
   static navigationOptions = {
-    title: 'Home',
-    headerTitleStyle : {width : Dimensions.get('window').width}
+    headerStyle: { backgroundColor: 'transparent' }
   };
 
   //Redirection to Registration screen
