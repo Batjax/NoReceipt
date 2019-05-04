@@ -1,8 +1,7 @@
 import React from 'react'
-import { Text, View, Image, ScrollView } from 'react-native'
 import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
-import AuthScreen from '../Containers/AuthScreen'
-import RegistrationScreen from '../Containers/RegistrationScreen'
+import AuthScreen from '../Containers/Auth/AuthScreen'
+import RegistrationScreen from '../Containers/Auth/RegistrationScreen'
 import TicketsListScreen from '../Containers/Content/TicketsListScreen'
 import ProfileScreen from '../Containers/Content/ProfileScreen'
 import { Icon } from 'react-native-elements'
@@ -12,8 +11,9 @@ import { Icon } from 'react-native-elements'
     Application tree :
 
     - AppSwitchNavigator
-        - AuthScreen
-        - RegistrationScreen
+        - AuthStackNativagor
+            - AuthScreen
+            - RegistrationScreen
         - ContentStackNavigator
             - ContentTabNavigator
                 - TicketsListScreen
@@ -22,6 +22,20 @@ import { Icon } from 'react-native-elements'
 
 */
 
+const AuthStackNavigator = createStackNavigator(
+    {
+        AuthScreen: {
+            screen: AuthScreen
+        },
+        RegistrationScreen: {
+            screen: RegistrationScreen
+        },
+    },
+    {
+        headerLayoutPreset: 'center'
+    }
+
+);
 
 const ContentTabNavigator = createBottomTabNavigator(
     {
@@ -50,56 +64,26 @@ const ContentTabNavigator = createBottomTabNavigator(
             style: {
                 height: 60,
             }
-        }
-    },
-    {
-        navigationOptions: ({ navigation }) => {
-            const { routeName } = navigation.state.routes[navigation.state.index];
-            return {
-                headerTitle: routeName,
-                headerTitleStyle: { alignItems: 'center', flex: 1, color: '#535c68' },
-            };
-        }
+        },
     }
 );
 
 const ContentStackNavigator = createStackNavigator(
     {
         ContentTabNavigator: ContentTabNavigator
-    },
-    {
-        /*defaultNavigationOptions: ({navigation}) => {
-            return {
-                headerLeft: (
-                    <Icon
-                        containerStyle={{ paddingLeft: 10 }}
-                        onPress={() => navigation.openDrawer()}
-                        name='menu'
-                        color='#535c68'
-                        size={30}
-                    />
-                )
-            }
-        }*/
     }
 );
 
 const AppSwitchNavigator = createSwitchNavigator({
-    AuthScreen: {
-        screen: AuthScreen,
-        headerMode: 'none',
+    AuthStack: {
+        screen: AuthStackNavigator
     },
-    RegistrationScreen: {
-        screen: RegistrationScreen,
-        headerMode: 'none',
-    },
-    ContentScreen: {
+    ContentStack: {
         screen: ContentStackNavigator
     }
 },
 {
-    headerMode: 'none',
-    initialRouteName: 'AuthScreen'
+    initialRouteName: 'AuthStack',
 });
 
 export default createAppContainer(AppSwitchNavigator);
