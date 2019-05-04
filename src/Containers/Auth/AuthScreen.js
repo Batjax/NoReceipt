@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Platform, StyleSheet, Text, View, TextInput, Image, Dimensions } from 'react-native';
-import { Icon } from 'react-native-elements/src/index';
 import styles from '../../Styles/styles';
 import AuthForm from '../../Components/AuthForm';
 
@@ -17,7 +16,7 @@ class AuthScreen extends Component {
 
   _loginRedirection = () => {
     this.props.navigation.navigate('ContentStack');
-  }
+  };
 
   render() {
     return (
