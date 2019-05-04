@@ -7,7 +7,7 @@ import AuthForm from '../../Components/AuthForm';
 class AuthScreen extends Component {
 
   static navigationOptions = {
-    headerStyle: { backgroundColor: 'transparent' }
+    headerStyle: { backgroundColor: 'transparent' },
   };
 
   //Redirection to Registration screen
@@ -16,7 +16,7 @@ class AuthScreen extends Component {
   };
 
   _loginRedirection = () => {
-    this.props.navigation.navigate('ContentScreen');
+    this.props.navigation.navigate('ContentStack');
   }
 
   render() {
