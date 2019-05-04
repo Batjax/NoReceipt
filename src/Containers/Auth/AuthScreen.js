@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { Platform, StyleSheet, Text, View, TextInput, Image } from 'react-native';
-import { Icon } from 'react-native-elements';
-import styles from '../Styles/styles';
-import AuthForm from '../Components/AuthForm';
+import { Platform, StyleSheet, Text, View, TextInput, Image, Dimensions } from 'react-native';
+import styles from '../../Styles/styles';
+import AuthForm from '../../Components/AuthForm';
 
 class AuthScreen extends Component {
+
+  static navigationOptions = {
+    headerStyle: { backgroundColor: 'transparent' },
+  };
 
   //Redirection to Registration screen
   _signUpRedirection = () => {
@@ -12,8 +15,8 @@ class AuthScreen extends Component {
   };
 
   _loginRedirection = () => {
-    this.props.navigation.navigate('ContentScreen');
-  }
+    this.props.navigation.navigate('ContentStack');
+  };
 
   render() {
     return (

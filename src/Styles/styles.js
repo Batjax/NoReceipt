@@ -1,6 +1,11 @@
-import { StyleSheet } from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+    headerTitle: {
+        width : Dimensions.get('window').width,
+        fontFamily: 'Montserrat-Regular',
+        color: '#535c68',
+    },
     container: {
         flex: 1,
         backgroundColor: '#fff',
