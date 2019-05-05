@@ -80,6 +80,13 @@ const styles = StyleSheet.create({
     divider: {
         backgroundColor: 'lightgray',
         marginVertical: 10
+    },
+    searchBar: {
+        margin: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'lightgray',
+        borderRadius: 25
     }
     
 });
