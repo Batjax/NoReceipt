@@ -80,7 +80,7 @@ const ContentTabNavigator = createBottomTabNavigator(
             showLabel: false,
             activeBackgroundColor: '#6ab04c11', //last pair of digits specifies opacity in hexa - from 00 (transparent) to ff (opaque)
             activeTintColor: '#6ab04c',
-            inactiveTintColor: '#535c68',
+            inactiveTintColor: 'darkslategray',
             style: {
                 height: 60,
             }
