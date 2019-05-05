@@ -1,12 +1,10 @@
 import React from 'react'
-import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
+import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation'
 import AuthScreen from '../Containers/Auth/AuthScreen'
 import RegistrationScreen from '../Containers/Auth/RegistrationScreen'
 import TicketsListScreen from '../Containers/Content/Tickets/TicketsListScreen'
 import ProfileScreen from '../Containers/Content/Profile/ProfileScreen'
 import { Icon } from 'react-native-elements'
-import {Dimensions} from "react-native";
-
 
 /* 
     Application tree :
