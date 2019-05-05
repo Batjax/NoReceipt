@@ -12,14 +12,14 @@ export default class TicketSortButtons extends Component {
                    rippleOpacity={1}
                    rippleDuration={200}
                    rippleSize={40}>
-                   <Icon iconStyle={{padding: 15}} size={30} name='sort' color={'#535c68'} type='material'/>
+                   <Icon iconStyle={{padding: 15}} size={30} name='sort' color={'darkslategray'} type='material'/>
                </Ripple>
                <Ripple
                    rippleCentered={true}
                    rippleOpacity={1}
                    rippleDuration={200}
                    rippleSize={40}>
-                   <Icon iconStyle={{padding: 15}} size={30} name='add-circle-outline' color={'#535c68'} type='material'/>
+                   <Icon iconStyle={{padding: 15}} size={30} name='add-circle-outline' color={'darkslategray'} type='material'/>
                </Ripple>
            </View>
        )

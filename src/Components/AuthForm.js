@@ -17,12 +17,12 @@ export default class AuthForm extends Component {
         return (
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
-                    <Icon iconStyle={{padding: 10}} name='person' type='material'/>
+                    <Icon iconStyle={{padding: 10}} name='person' type='material' color={'darkslategray'}/>
                     <TextInput
                         style={styles.inputText}
                         placeholder={'Identifiant'}
-                        selectionColor='#535c68'
-                        placeholderTextColor='#535c68'
+                        selectionColor='darkslategray'
+                        placeholderTextColor='darkslategray'
                         onSubmitEditing={() => this.passwordInput.focus()}
                         autoCapitalize='none'
                         autoCorrect={false}
@@ -30,11 +30,11 @@ export default class AuthForm extends Component {
                     />
                 </View>
                 <View style={styles.inputContainer}>
-                    <Icon iconStyle={{padding: 10}} name='lock' type='material'/>
+                    <Icon iconStyle={{padding: 10}} name='lock' type='material' color={'darkslategray'}/>
                     <TextInput
                         style={styles.inputText}
                         placeholder={'Mot de passe'}
-                        placeholderTextColor='#535c68'
+                        placeholderTextColor='darkslategray'
                         secureTextEntry
                         ref={(input) => this.passwordInput = input}
                         onChangeText={(text) => this.setState({login: text})}

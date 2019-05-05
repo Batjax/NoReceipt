@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     headerTitle: {
         width : Dimensions.get('window').width,
         fontFamily: 'Montserrat-Regular',
-        color: '#535c68',
+        color: 'darkslategray',
     },
     container: {
         flex: 1,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     inputText: {
         flex: 1,
         fontFamily: 'Montserrat-Regular',
-        color: '#535c68',
+        color: 'darkslategray',
     },
     button: {
         width: 300,
@@ -66,11 +66,21 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         color: '#6ab04c',
     },
+    //Common styles
+    titleText: {
+      fontSize: 20,
+      fontFamily: 'Montserrat-Regular',
+        color: 'darkslategray',
+    },
     basicText: {
         fontSize: 16,
         fontFamily: 'Montserrat-Regular',
-        color: '#535c68',
+        color: 'darkslategray',
     },
+    divider: {
+        backgroundColor: 'lightgray',
+        marginVertical: 10
+    }
     
 });
 

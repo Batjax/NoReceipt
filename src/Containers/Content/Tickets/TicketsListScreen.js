@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import {Text, View, Dimensions} from 'react-native'
+import {Text, View, Dimensions, ScrollView} from 'react-native'
 import TicketsSortButtons from '../../../Components/TicketSortButtons'
+import TicketCard from '../../../Components/TicketCard'
 import styles from '../../../Styles/styles'
 
-const { height, width } = Dimensions.get('window')
+const { height, width } = Dimensions.get('window');
 
 
 export default class TicketsListScreen extends Component {
@@ -23,8 +24,14 @@ export default class TicketsListScreen extends Component {
 
   render() {
     return (
-      <View>
-        <Text> textInComponent </Text>
+      <View style={{flex: 1}}>
+        <ScrollView
+            horizontal={true}
+            pagingEnabled={true}>
+          <TicketCard/>
+          <TicketCard/>
+          <TicketCard/>
+        </ScrollView>
       </View>
     )
   }
