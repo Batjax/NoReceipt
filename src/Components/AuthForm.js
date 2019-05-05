@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 import styles from '../Styles/styles';
+import Ripple from 'react-native-material-ripple';
 
 
 export default class AuthForm extends Component {
@@ -39,11 +40,14 @@ export default class AuthForm extends Component {
                         onChangeText={(text) => this.setState({login: text})}
                     />
                 </View>
-                <TouchableOpacity
+                <Ripple
+                    rippleContainerBorderRadius={25}
                     onPress={() => loginRedirection()}
                     style={styles.button}>
-                    <Text style={styles.buttonText}>Connexion</Text>
-                </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Text style={styles.buttonText}>Connexion</Text>
+                    </TouchableOpacity>
+                </Ripple>
                 <View style={styles.registrationContainer}>
                     <Text style={styles.basicText}>Aucun compte ?</Text>
                     <TouchableOpacity
