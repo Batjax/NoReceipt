@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Text, View, Dimensions} from 'react-native'
+import {Text, View, Dimensions, ScrollView} from 'react-native'
 import TicketsSortButtons from '../../../Components/TicketSortButtons'
 import TicketCard from '../../../Components/TicketCard'
 import styles from '../../../Styles/styles'
@@ -25,7 +25,13 @@ export default class TicketsListScreen extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <TicketCard/>
+        <ScrollView
+            horizontal={true}
+            pagingEnabled={true}>
+          <TicketCard/>
+          <TicketCard/>
+          <TicketCard/>
+        </ScrollView>
       </View>
     )
   }

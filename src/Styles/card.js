@@ -1,11 +1,17 @@
 import { Dimensions, StyleSheet } from 'react-native'
+const { height, width } = Dimensions.get('window');
+
 
 const styles = StyleSheet.create({
+    cardPadding: {
+        width: width,
+        paddingHorizontal: 20
+    },
     cardContainer: {
         flex: 1,
         backgroundColor: 'white',
         marginVertical: 100,
-        marginHorizontal: 10,
+        //marginHorizontal: 10,
         borderWidth: 1,
         borderColor: 'lightgray',
         borderRadius: 8,
