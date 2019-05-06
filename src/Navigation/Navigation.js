@@ -61,7 +61,7 @@ const ContentTabNavigator = createBottomTabNavigator(
             screen: TicketStackNavigator,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
-                    <Icon name='receipt' size={30} color={tintColor}/>
+                    <Icon name='receipt' size={30} color={tintColor} type={'material-community'}/>
                 )
             } 
         },
@@ -69,7 +69,7 @@ const ContentTabNavigator = createBottomTabNavigator(
             screen: ProfileStackNavigator,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
-                    <Icon name='account-circle' size={30} color={tintColor}/>
+                    <Icon name='account' size={30} color={tintColor} type={'material-community'}/>
                 )
             }
         }

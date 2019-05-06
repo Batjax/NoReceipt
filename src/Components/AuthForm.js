@@ -17,7 +17,7 @@ export default class AuthForm extends Component {
         return (
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
-                    <Icon iconStyle={{padding: 10}} name='person' type='material' color={'darkslategray'}/>
+                    <Icon iconStyle={{padding: 10}} name={'account'} type={'material-community'} color={'darkslategray'}/>
                     <TextInput
                         style={styles.inputText}
                         placeholder={'Identifiant'}
@@ -30,7 +30,7 @@ export default class AuthForm extends Component {
                     />
                 </View>
                 <View style={styles.inputContainer}>
-                    <Icon iconStyle={{padding: 10}} name='lock' type='material' color={'darkslategray'}/>
+                    <Icon iconStyle={{padding: 10}} name={'lock'} type={'material-community'} color={'darkslategray'}/>
                     <TextInput
                         style={styles.inputText}
                         placeholder={'Mot de passe'}
