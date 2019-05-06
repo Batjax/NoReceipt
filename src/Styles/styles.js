@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     },
     //Common styles
     titleText: {
-      fontSize: 20,
-      fontFamily: 'Montserrat-Regular',
+        fontSize: 20,
+        fontFamily: 'Montserrat-Regular',
         color: 'darkslategray',
     },
     basicText: {
@@ -80,6 +80,14 @@ const styles = StyleSheet.create({
     divider: {
         backgroundColor: 'lightgray',
         marginVertical: 10
+    },
+    searchBar: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: 'lightgray',
+        borderRadius: 25,
+        marginHorizontal: 10,
     }
     
 });

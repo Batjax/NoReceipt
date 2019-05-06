@@ -10,8 +10,7 @@ const styles = StyleSheet.create({
     cardContainer: {
         flex: 1,
         backgroundColor: 'white',
-        marginVertical: 100,
-        //marginHorizontal: 10,
+        marginBottom: 40,
         borderWidth: 1,
         borderColor: 'lightgray',
         borderRadius: 8,
