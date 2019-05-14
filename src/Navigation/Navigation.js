@@ -13,7 +13,7 @@ import { Icon } from 'react-native-elements'
         - AuthStackNavigator
             - AuthScreen
             - RegistrationScreen
-            - ContentTabNavigator
+        - ContentTabNavigator
                 - TicketStackNavigator
                     - TicketsListScreen
                 - ProfileStackNavigator
