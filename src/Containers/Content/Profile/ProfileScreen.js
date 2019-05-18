@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Dimensions, View, Text} from 'react-native'
 import styles from "../../../Styles/styles";
+import ProfilForm from "../../../Components/ProfilForm";
 
 
 export default class ProfileScreen extends Component {
@@ -12,8 +13,8 @@ export default class ProfileScreen extends Component {
 
     render() {
         return (
-        <View>
-            <Text>zefzef</Text>
+        <View style={styles.container}>
+            <ProfilForm/>
         </View>
         )
     }

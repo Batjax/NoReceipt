@@ -24,7 +24,7 @@ class AuthScreen extends Component {
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
-            source={{uri: 'http://www.acseo.fr/wp-content/uploads/2016/01/react-logo.png'}}
+            source={require('../../Images/logo_noreceipt.png')}
           />
         </View>
         <AuthForm signUpRedirection={this._signUpRedirection} loginRedirection={this._loginRedirection}/>

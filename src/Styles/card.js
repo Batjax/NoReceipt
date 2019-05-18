@@ -5,7 +5,7 @@ const { height, width } = Dimensions.get('window');
 const styles = StyleSheet.create({
     cardPadding: {
         width: width,
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
     },
     cardContainer: {
         flex: 1,
@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'lightgray',
         borderRadius: 8,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        elevation: 8,
     },
     cardImage: {
         flex: 1,

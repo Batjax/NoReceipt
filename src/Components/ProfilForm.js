@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 import styles from '../Styles/styles';
-import Ripple from 'react-native-material-ripple';
+import Ripple from "react-native-material-ripple";
 
+export default class ProfilForm extends Component {
 
-export default class AuthForm extends Component {
-
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
     render() {
-        const { signUpRedirection, loginRedirection, navigation } = this.props;
         return (
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
@@ -34,27 +32,41 @@ export default class AuthForm extends Component {
                         style={styles.inputText}
                         placeholder={'Mot de passe'}
                         placeholderTextColor='darkslategray'
+                        onSubmitEditing={() => this.emailInput.focus()}
                         secureTextEntry
                         ref={(input) => this.passwordInput = input}
                         onChangeText={(text) => this.setState({password: text})}
                     />
                 </View>
+                <View style={styles.inputContainer}>
+                    <Icon iconStyle={{padding: 10}} name={'at'} type={'material-community'} color={'darkslategray'}/>
+                    <TextInput
+                        style={styles.inputText}
+                        keyboardType={'email-address'}
+                        placeholder={'Email'}
+                        placeholderTextColor='darkslategray'
+                        onSubmitEditing={() => this.birthdayInput.focus()}
+                        ref={(input) => this.emailInput = input}
+                        onChangeText={(text) => this.setState({email: text})}
+                    />
+                </View>
+                <View style={styles.inputContainer}>
+                    <Icon iconStyle={{padding: 10}} name={'cake'} type={'material-community'} color={'darkslategray'}/>
+                    <TextInput
+                        style={styles.inputText}
+                        placeholder={'Date de naissance'}
+                        placeholderTextColor='darkslategray'
+                        ref={(input) => this.birthdayInput = input}
+                        onChangeText={(text) => this.setState({birthday: text})}
+                    />
+                </View>
                 <Ripple
                     rippleContainerBorderRadius={25}
-                    onPress={() => loginRedirection()}
                     style={styles.button}>
                     <TouchableOpacity>
-                        <Text style={styles.buttonText}>Connexion</Text>
+                        <Text style={styles.buttonText}>Modifier</Text>
                     </TouchableOpacity>
                 </Ripple>
-                <View style={styles.registrationContainer}>
-                    <Text style={styles.basicText}>Aucun compte ?</Text>
-                    <TouchableOpacity
-                        onPress={() => signUpRedirection()}
-                        hitSlop={{top: 20, left: 20, bottom: 20, right: 20}}>
-                        <Text style={[styles.basicText, styles.registrationButton]}>S'inscrire</Text>
-                    </TouchableOpacity>
-                </View>
             </View>
         )
     }
