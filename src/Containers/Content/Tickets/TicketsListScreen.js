@@ -3,21 +3,37 @@ import {View, Dimensions, ScrollView, TextInput} from 'react-native'
 import TicketsSortButtons from '../../../Components/TicketSortButtons'
 import TicketCard from '../../../Components/TicketCard'
 import styles from '../../../Styles/styles'
-import {Icon} from "react-native-elements";
+import {Icon, ListItem} from "react-native-elements";
 import Ripple from "react-native-material-ripple";
 
 const { height, width } = Dimensions.get('window');
 
+let tickets = [
+  {id: 0, title: 'Zappo', city: 'Lyon', date: '19/05/2019', price: '16.50€', image: 'https://media-cdn.tripadvisor.com/media/photo-s/0f/16/0b/ef/zappo.jpg', logo: {icon: 'silverware', color: 'lightblue'}},
+  {id: 1, title: 'Intermarché', city: 'Lyon', date: '08/05/2019', price: '67.39€', image: 'https://www.observatoiredelafranchise.fr/images/enseignes/1537/im-express-tours-petit.jpg', logo: {icon: 'cart', color: 'sandybrown'}},
+  {id: 2, title: '405 Bar à bières', city: 'Lyon', date: '28/04/2019', price: '12.20€', image: 'https://media-cdn.tripadvisor.com/media/photo-s/0c/87/61/19/405-bar-a-bieres.jpg', logo: {icon: 'glass-cocktail', color: 'violet'}},
+];
+
+let ticketsList = [];
+
+ticketsList = tickets.map(ticketItem => (
+  <TicketCard key={ticketItem.id} details={ticketItem}/>
+));
 
 export default class TicketsListScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Tickets',
       headerTitleStyle : styles.headerTitle,
-    }
+    };
   };
 
   render() {
+
+
+
+
+
     return (
       <View style={{flex: 1}}>
         <View style={{flexDirection: 'row', alignItems: 'center', marginHorizontal: 20, marginVertical: 20}}>
@@ -52,9 +68,7 @@ export default class TicketsListScreen extends Component {
         <ScrollView
             horizontal={true}
             pagingEnabled={true}>
-          <TicketCard/>
-          <TicketCard/>
-          <TicketCard/>
+            {ticketsList}
         </ScrollView>
       </View>
     )

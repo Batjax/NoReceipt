@@ -11,7 +11,6 @@ export default class ProfilForm extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
@@ -33,18 +32,22 @@ export default class ProfilForm extends Component {
                         style={styles.inputText}
                         placeholder={'Mot de passe'}
                         placeholderTextColor='darkslategray'
+                        onSubmitEditing={() => this.emailInput.focus()}
                         secureTextEntry
                         ref={(input) => this.passwordInput = input}
-                        onChangeText={(text) => this.setState({login: text})}
+                        onChangeText={(text) => this.setState({password: text})}
                     />
                 </View>
                 <View style={styles.inputContainer}>
                     <Icon iconStyle={{padding: 10}} name={'at'} type={'material-community'} color={'darkslategray'}/>
                     <TextInput
                         style={styles.inputText}
+                        keyboardType={'email-address'}
                         placeholder={'Email'}
                         placeholderTextColor='darkslategray'
-                        onChangeText={(text) => this.setState({login: text})}
+                        onSubmitEditing={() => this.birthdayInput.focus()}
+                        ref={(input) => this.emailInput = input}
+                        onChangeText={(text) => this.setState({email: text})}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -53,7 +56,8 @@ export default class ProfilForm extends Component {
                         style={styles.inputText}
                         placeholder={'Date de naissance'}
                         placeholderTextColor='darkslategray'
-                        onChangeText={(text) => this.setState({login: text})}
+                        ref={(input) => this.birthdayInput = input}
+                        onChangeText={(text) => this.setState({birthday: text})}
                     />
                 </View>
                 <Ripple

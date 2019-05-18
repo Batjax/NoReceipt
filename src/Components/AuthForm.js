@@ -13,7 +13,6 @@ export default class AuthForm extends Component {
 
     render() {
         const { signUpRedirection, loginRedirection, navigation } = this.props;
-        console.log(this.props);
         return (
             <View style={styles.formContainer}>
                 <View style={styles.inputContainer}>
@@ -37,7 +36,7 @@ export default class AuthForm extends Component {
                         placeholderTextColor='darkslategray'
                         secureTextEntry
                         ref={(input) => this.passwordInput = input}
-                        onChangeText={(text) => this.setState({login: text})}
+                        onChangeText={(text) => this.setState({password: text})}
                     />
                 </View>
                 <Ripple

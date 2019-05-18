@@ -20,10 +20,12 @@ const styles = StyleSheet.create({
     logo: {
         height: 200,
         width: 200,
+        tintColor: '#679967',
         //backgroundColor: '#679967',
     },
     formContainer: {
         flex: 1,
+        justifyContent: 'center'
         //backgroundColor: 'blue',
     },
     inputContainer: {
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         alignItems: 'center',
         justifyContent: 'center',
-        elevation: 1
+        elevation: 8
     },
     buttonText: {
         fontFamily: 'Montserrat-Regular',
